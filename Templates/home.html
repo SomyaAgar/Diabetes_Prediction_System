@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Diabetes Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2 style="text-align:center;">Predict Your Diabetes Now !!</h2>
+  <form  class="form-horizontal"action="{{ url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Pregnancies">Pregnancies:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" placeholder="Pregnancies" name="Pregnancies"  required="required" >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Glucose">Glucose:</label>
+      <div class="col-sm-10"> 
+        <input type="text" class="form-control" placeholder="Glucose" name="Glucose"  required="required" >         
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="BloodPressure">Blood Pressure:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" placeholder="BloodPressure" name="BloodPressure"  required="required" >         
+        </div>
+      </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="SkinThickness">Skin Thinckness:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" placeholder="SkinThickness" name="SkinThickness"  required="required" >         
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="Insulin">Insulin:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" placeholder="Insulin" name="Insulin"  required="required" >         
+        </div>
+      </div>   
+      
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="BMI">BMI:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" placeholder="BMI" name="BMI"  required="required" >         
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" placeholder="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction"  required="required" >         
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="Age">Age:</label>
+        <div class="col-sm-10"> 
+          <input type="text" class="form-control" placeholder="Age" name="Age"  required="required" >         
+        </div>
+      </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" >Predict</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
